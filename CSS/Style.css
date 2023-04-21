@@ -1,0 +1,46 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+body{display: flex; align-items: center; justify-content: center; background-color: gray; user-select: none;}
+
+.Block{width: 600px; height: 150px; position: absolute;}
+
+.Box{width: 600px; height: 150px; border: 2px black solid; position: relative; background-color: azure; overflow: hidden; display: flex; align-items: center; justify-content: center;}
+.Earth{width: 100%; height: 1px; background-color: black; position: absolute; bottom: 30px;}
+.Dino_Box{width: 44px; height: 47px; position: absolute; bottom: 20px; left: 30px;}
+.Dino_Body{position: absolute; display: flex;}
+.Kaktyz{position: absolute; bottom: 20px; left: 800px; user-select: none; z-index: 1;}
