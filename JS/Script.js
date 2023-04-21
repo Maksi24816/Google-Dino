@@ -11,6 +11,9 @@ let Num = 1;
 let RunLet = 0;
 let NumKaktyz = 0;
 
+let MaxCounterNum = 0;
+let CounterNum = 0;
+
 let Counter, Run, Game;
 
 document.getElementById("Start_Box").addEventListener("click", function (){
@@ -32,9 +35,6 @@ function Interval (){
             }
         }
     }, 92)
-    
-    let MaxCounterNum = 0;
-    let CounterNum = 0;
     Counter = setInterval(function (){
         CounterNum++;
         if (CounterNum < 10){
@@ -85,7 +85,7 @@ function Interval (){
         const DinoWidth = Dino.clientWidth;
         const DinoHeight = Dino.clientHeight;
     
-        if ((Dino.offsetLeft + DinoWidth - 18) > Kaktyz[NumKaktyz].offsetLeft && (Dino.offsetLeft + DinoWidth - 18) < (Kaktyz[NumKaktyz].offsetLeft + KaktyzWidth)){
+        if ((Dino.offsetLeft + DinoWidth - 20) > Kaktyz[NumKaktyz].offsetLeft && (Dino.offsetLeft + DinoWidth - 20) < (Kaktyz[NumKaktyz].offsetLeft + KaktyzWidth)){
             if ((Dino.offsetTop + DinoHeight - 5) < Kaktyz[NumKaktyz].offsetTop || (Dino.offsetTop + DinoHeight - 5) > (Kaktyz[NumKaktyz].offsetTop + KaktyzHeight)){
     
             } else {
@@ -101,6 +101,7 @@ function Interval (){
                 clearInterval(Counter);
     
                 if (MaxCounterNum < CounterNum){
+                    console.log(MaxCounterNum + " " + CounterNum);
                     MaxCounterNum = CounterNum;
                     if (MaxCounterNum < 10){
                         Max_Counter_Text.innerText = "0000" + MaxCounterNum;
