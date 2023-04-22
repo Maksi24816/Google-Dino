@@ -11,25 +11,31 @@
    <link rel="stylesheet" href="CSS/Style.css">
 
    <script src="JS/Script.js" defer></script>    
+   <script src="JS/Intervals.js" defer></script>   
+   <script src="JS/Action.js" defer></script>    
 
    </head>
    <body>
       <div style="width: 100%; height: 100%; position: absolute; z-index: 5; display: flex; align-items: center; justify-content: center;" id="Start_Box">
-         <img style="position: absolute; z-index: 2;" id="Start" src="IMG/Start.png">
+         <img style="position: absolute; z-index: 2;" id="Start" src="See/Start.png">
       </div>
       <div style="z-index: 1;" class="Block"></div>
       <div style="z-index: 2;" class="Box">
          <div class="Earth"></div>
          <div style="z-index: 2;" class="Dino_Box">
-            <img id="Body1" style="z-index: 1;" class="Dino_Body" src="IMG/DinoT1.png">
-            <img id="Body2" style="z-index: 2;" class="Dino_Body" src="IMG/DinoT2.png">
-            <img style="z-index: 0;" class="Dino_Body" src="IMG/DinoStop.png">
+            <img id="Body1" style="z-index: 1;" class="Dino_Body" src="See/DinoT1.png">
+            <img id="Body2" style="z-index: 2;" class="Dino_Body" src="See/DinoT2.png">
+            <img id="DinoStop" style="z-index: 0;" class="Dino_Body" src="See/DinoStop.png">
+            <div style="z-index: 2; visibility: hidden;" class="Dino_Box_B">
+               <img id="BodyB1" style="z-index: 1;" class="Dino_Body" src="See/DinoB1.png">
+               <img id="BodyB2" style="z-index: 2;" class="Dino_Body" src="See/DinoB2.png">
+            </div>
          </div>
-         <img class="Kaktyz" src="IMG/KaktyzB1.png">
-         <img style="left: 1100px;" class="Kaktyz" src="IMG/KaktyzB2.png">
-         <img style="left: 1350px;" class="Kaktyz" src="IMG/KaktyzB3.png">
-         <img style="left: 1550px;" class="Kaktyz" src="IMG/KaktyzB1.png">
-         <img style="position: absolute; z-index: 2; visibility: hidden;" id="GameOver" src="IMG/GameOver.png">
+         <img class="Kaktyz" src="See/KaktyzB1.png">
+         <img style="left: 1100px;" class="Kaktyz" src="See/KaktyzB2.png">
+         <img style="left: 1350px;" class="Kaktyz" src="See/KaktyzB3.png">
+         <img style="left: 1550px;" class="Kaktyz" src="See/KaktyzB1.png">
+         <img style="position: absolute; z-index: 2; visibility: hidden;" id="GameOver" src="See/GameOver.png">
          <div style="display: flex; align-items: center; justify-content: space-between;  position: absolute; top: 10px; right: 10px; width: 160px;">
             <p style="font-size: 18px;">HI</p>
             <p id="Max_Counter" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 18px;">00000</p>
