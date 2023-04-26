@@ -220,6 +220,8 @@ function Interval (){
             if ((Dino.offsetTop + DinoHeight - 5) < Kaktyz[Num_Space].offsetTop || (Dino.offsetTop + DinoHeight - 5) > (Kaktyz[Num_Space].offsetTop + KaktyzHeight + 20)){
     
             } else {
+                Dino_Box.style.top = "79px";
+
                 End = 1;
                 
                 Dino_Box.style.visibility = "visible";
