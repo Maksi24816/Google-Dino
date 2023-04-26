@@ -36,7 +36,7 @@ let RunLet = 0;
 let NumKaktyz = 0;
 
 let MaxCounterNum = 0;
-let CounterNum = 301;
+let CounterNum = 1;
 
 let Counter, Run, Game, SetJump, UpdateTimeGame;
 
