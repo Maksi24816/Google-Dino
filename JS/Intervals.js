@@ -3,7 +3,8 @@ let RestartTimeGame = false;
 let R_K, R, MaxRK;
 let ElementoffsetLeft;
 let Num_Space = 0;
-
+const DinoWidth = Dino.clientWidth;
+const DinoHeight = Dino.clientHeight;
 let Space;
 let CloudNum = 0;
 let StopCounter = 0;
@@ -11,31 +12,11 @@ let RemoveCounter = 0;
 let FiveR, FiveR2 = 0;
 let PteroAct = true;
 let Pter = 0;
-
-let MaxCounterNum = 0;
-let CounterNum = 1;
-
-let Counter, Run, Game, SetJump, UpdateTimeGame;
-const CounterClass = document.querySelector(".Counter");
-let BodyTB = 1;
-
-const Dino_Box = document.querySelector(".Dino_Box");
-const Dino_Box_B = document.querySelector(".Dino_Box_B");
-const Dino = document.querySelector(".Dino_Box");
-const Kaktyz = document.getElementsByClassName("Kaktyz");
-const None = document.getElementsByClassName("None");
-
-let KaktyzWidth = Kaktyz[Num_Space].clientWidth;
-let JumpAct = false;
 let GetUp = false;
-
-let Num = 1;
-let RunLet = 0;
-let NumKaktyz = 0;
+const Five = document.getElementById("5");
 
 function Interval (){
     Counter = setInterval(function (){
-        const Counter_Text = document.getElementById("Counter");
         CounterNum++;
         
         if (StopCounter == 0){
@@ -71,8 +52,6 @@ function Interval (){
     }, 100)
 
     Game = setInterval(function (){
-        const Stones_Box = document.getElementById("Stones_Box");
-        
         ElementoffsetLeft = Stones_Box.offsetLeft;
         Stones_Box.style.left = ElementoffsetLeft - 3 +"px";
 
@@ -170,7 +149,7 @@ function Interval (){
                         };
                         R_K = Math.random() * (3 + MaxRK);
                         R_K = Math.floor(R_K);
-
+        
                         if (None[R_K].classList.contains('Kaktyz')){
                             R_K_Fun();
                         } else {
@@ -179,8 +158,8 @@ function Interval (){
                     }R_K_Fun();
                 }
 
-                const Five = document.getElementById("5");
                 if (R_K == 5){
+                    console.log(PteroAct)
 
                     FiveR = Math.random() * 3;
                     FiveR = Math.ceil(FiveR);
@@ -209,14 +188,12 @@ function Interval (){
                             }
                         }, (RunningSpeed + 5)*8)
                     }
-
-                    R = Math.random() * 15;
-                    R = Math.ceil(R);
-                } else {
                     R = Math.random() * 15;
                     R = Math.ceil(R);
                 }
 
+                R = Math.random() * 15;
+                R = Math.ceil(R);
     
                 Space = Space + 150 + (R * 20);
 
@@ -236,22 +213,22 @@ function Interval (){
                 }
             }
         }
-        const DinoWidth = Dino.clientWidth;
-        const DinoHeight = Dino.clientHeight;
+
+        let KaktyzWidth = Kaktyz[Num_Space].clientWidth;
+
         if ((Dino.offsetLeft + DinoWidth - 20) > Kaktyz[Num_Space].offsetLeft && (Dino.offsetLeft + DinoWidth - 20) < (Kaktyz[Num_Space].offsetLeft + KaktyzWidth)){
             let KaktyzHeight = Kaktyz[Num_Space].clientHeight;
             if ((Dino.offsetTop + DinoHeight - 5) < Kaktyz[Num_Space].offsetTop || (Dino.offsetTop + DinoHeight - 5) > (Kaktyz[Num_Space].offsetTop + KaktyzHeight + 20)){
     
             } else {
                 End = 1;
-
+                
                 Dino_Box.style.visibility = "visible";
                 Dino_Box_B.style.visibility = "hidden";
                 BodyTB = 1;
 
                 Body1.style.display = "none";
                 Body2.style.display = "none";
-
 
                 GameOver.style.visibility = "visible";
 
@@ -260,8 +237,7 @@ function Interval (){
                 clearInterval(Game);
                 clearInterval(Run);
                 clearInterval(Counter);
-
-                const Max_Counter_Text = document.getElementById("Max_Counter");
+    
                 if (MaxCounterNum < CounterNum){
                     MaxCounterNum = CounterNum;
                     if (MaxCounterNum < 10){
@@ -305,7 +281,6 @@ function Interval (){
                 }
             } else {
                 if (Num == 1){
-                    const BodyB2 = document.getElementById("BodyB2");
                     BodyB2.style.zIndex = 0;
                     Num = 2;
                 } else if (Num == 2){
@@ -351,7 +326,7 @@ function Jump (){
         let Tsykl2 = Tsykl + 15;
         let Tsykl21 = Tsykl * 2 + 1;
         let Tsykl22 = Tsykl21 + 30;
-        let SetJumpUp = setInterval(function (){
+        SetJumpUp = setInterval(function (){
             Top-=1;
             Dino.style.top = Top + "px";
             
@@ -360,8 +335,9 @@ function Jump (){
                 SetJumpPress = setInterval(function (){
                     Top+=1;
                     Dino.style.top = Top + "px";
-                    if (GetUp == true && Dino.offsetTop > 76){
+                    if (GetUp == true && Dino.offsetTop > 69){
                         Dino.style.top = 79 + "px";
+                        console.log(123)
                         RunLet = 0;
                         keyDown = 0;
                         JumpAct = false;
@@ -381,8 +357,9 @@ function Jump (){
                 SetJumpPress = setInterval(function (){
                     Top+=1;
                     Dino.style.top = Top + "px";
-                    if (GetUp == true && Dino.offsetTop > 74){
+                    if (GetUp == true && Dino.offsetTop > 66){
                         Dino.style.top = 79 + "px";
+                        console.log(123)
                         RunLet = 0;
                         keyDown = 0;
                         JumpAct = false;
