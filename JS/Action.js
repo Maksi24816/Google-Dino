@@ -48,10 +48,10 @@ window.addEventListener("keyup", (event) =>{
 
 //-----Click-----//
 
-Dino_Box.addEventListener("mouseup", (event) =>{
+Box.addEventListener("mouseup", (event) =>{
     keyDown = 1;
 });
-Dino_Box.addEventListener("mousedown",  (event) =>{
+Box.addEventListener("mousedown",  (event) =>{
     if (End == 1){
         Restart();
     } else if (StartLet == false){

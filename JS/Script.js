@@ -26,7 +26,7 @@ const Max_Counter_Text = document.getElementById("Max_Counter");
 const Dino_Box = document.querySelector(".Dino_Box");
 const Dino_Box_B = document.querySelector(".Dino_Box_B");
 const DinoStop = document.getElementById("DinoStop");
-
+const Box = document.querySelector(".Box")
 const CounterClass = document.querySelector(".Counter");
 
 let StartLet = false;
@@ -36,7 +36,7 @@ let RunLet = 0;
 let NumKaktyz = 0;
 
 let MaxCounterNum = 0;
-let CounterNum = 1;
+let CounterNum = 301;
 
 let Counter, Run, Game, SetJump, UpdateTimeGame;
 

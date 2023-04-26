@@ -158,13 +158,11 @@ function Interval (){
                     }R_K_Fun();
                 }
 
-                if (R_K == 5){
+                /* if (R_K == 5){
                     console.log(PteroAct)
 
-                    FiveR = Math.random() * 3;
-                    FiveR = Math.ceil(FiveR);
+
                     
-                    Five.style.bottom = (20 * FiveR) + "px";
 
                     FiveR2 = Math.random() * 3;
                     FiveR2 = Math.ceil(FiveR2);
@@ -177,7 +175,7 @@ function Interval (){
                             if (Five.style.left < 40){
                                 clearInterval(R2);
                             }
-                        }, (RunningSpeed + 5)*8)
+                        }, (RunningSpeed + 5)*15)
                     } else if (FiveR2 == 3){
                         let R2 = setInterval(function(){
                             ElementoffsetLeft = Five.offsetLeft;
@@ -186,22 +184,23 @@ function Interval (){
                             if (Five.style.left < 40){
                                 clearInterval(R2);
                             }
-                        }, (RunningSpeed + 5)*8)
+                        }, (RunningSpeed + 5)*15)
                     }
-                    R = Math.random() * 15;
-                    R = Math.ceil(R);
-                }
+                } else {
+
+                } */
 
                 R = Math.random() * 15;
                 R = Math.ceil(R);
     
-                Space = Space + 150 + (R * 20);
+                Space = Space + 200 + (R * 15);
 
                 if (CounterNum > 100) {
                     None[R_K].style.left = Space + "px";
                 } else {
                     Kaktyz[y].style.left = Space + "px";
                 }
+                
 
                 Space = 11111;
                 Num_Space = 0;
@@ -335,7 +334,7 @@ function Jump (){
                 SetJumpPress = setInterval(function (){
                     Top+=1;
                     Dino.style.top = Top + "px";
-                    if (GetUp == true && Dino.offsetTop > 69){
+                    if (GetUp == true && Dino.offsetTop > 75){
                         Dino.style.top = 79 + "px";
                         console.log(123)
                         RunLet = 0;
@@ -357,7 +356,7 @@ function Jump (){
                 SetJumpPress = setInterval(function (){
                     Top+=1;
                     Dino.style.top = Top + "px";
-                    if (GetUp == true && Dino.offsetTop > 66){
+                    if (GetUp == true && Dino.offsetTop > 73){
                         Dino.style.top = 79 + "px";
                         console.log(123)
                         RunLet = 0;
