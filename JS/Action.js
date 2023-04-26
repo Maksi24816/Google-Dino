@@ -1,6 +1,5 @@
 
 //-----Key-----//
-
 let keyDown = 0;
 window.addEventListener("keydown", (event) =>{
     if (event.code == "Space" || event.code == "ArrowUp" || event.code == "KeyW"){
@@ -24,9 +23,13 @@ window.addEventListener("keyup", (event) =>{
 window.addEventListener("keydown", (event) =>{
     if (End == 0) {
         if (event.code == "ArrowDown" || event.code == "KeyS"){
-            Dino_Box.style.visibility = "hidden";
-            Dino_Box_B.style.visibility = "visible";
-            BodyTB = 2;
+            GetUp = true;
+            if (JumpAct == false){
+                Dino_Box.style.visibility = "hidden";
+                Dino_Box_B.style.visibility = "visible";
+                BodyTB = 2;
+                Dino_Box.style.top = "99px";
+            }
         }
     }
 });
@@ -37,6 +40,7 @@ window.addEventListener("keyup", (event) =>{
             Dino_Box.style.visibility = "visible";
             Dino_Box_B.style.visibility = "hidden";
             BodyTB = 1;
+            Dino_Box.style.top = "79px";
         }
     }
 
@@ -44,10 +48,10 @@ window.addEventListener("keyup", (event) =>{
 
 //-----Click-----//
 
-window.addEventListener("mouseup", (event) =>{
+Box.addEventListener("mouseup", (event) =>{
     keyDown = 1;
 });
-window.addEventListener("mousedown",  (event) =>{
+Box.addEventListener("mousedown",  (event) =>{
     if (End == 1){
         Restart();
     } else if (StartLet == false){
@@ -58,4 +62,9 @@ window.addEventListener("mousedown",  (event) =>{
 });
 
 document.getElementById("Start_Box").addEventListener("click", Start);
-Block.addEventListener("click", Restart);
+
+const RightB = document.querySelector(".Right");
+
+RightB.addEventListener("mousedown", (event) =>{
+    Jump ();
+});
